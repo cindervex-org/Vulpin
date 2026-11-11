@@ -31,10 +31,8 @@
 
 or Download source!
 
-*Notice:* **Run as root**
-
 ```
-python setup.py
+./build.sh
 ```
 
 If you got Permission Denied, You didn't run them as Root.
