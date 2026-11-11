@@ -319,8 +319,9 @@ G"Done"
 
 ---
 
-## <img src="https://github.com/user-attachments/assets/38ebe561-eb9a-47c5-bff0-c5d8d778637a" width="28" alt="Functions"> Functions
+## <img src="https://github.com/user-attachments/assets/38ebe561-eb9a-47c5-bff0-c5d8d778637a" width="28" alt="Functions"> Functions and global var
 
+### Functions
 ```basic
 F add(a, b)
     R a + b
@@ -333,6 +334,25 @@ F greet(name)
 ~
 
 greet("World")
+```
+
+### Global Variables
+
+like this!
+
+```
+l score=10
+F add_score()
+    l score=score+5
+    G "Score updated!"
+~
+G "Before: "
+G score
+
+add_score()
+
+G "After: "
+G score
 ```
 
 ---
