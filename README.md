@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Vulpin</strong> is a tiny, <em>single character command scripting language</em> that runs on top of <strong>C</strong>!<br>
+  <strong>Vulpin</strong> is a tiny, <em>single character command scripting language</em> that runs on top of <strong>Nasm</strong>!<br>
   It was designed to let you <strong><em>write the smallest possible program's</em></strong>.
 </p>
 
