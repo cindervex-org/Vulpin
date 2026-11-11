@@ -220,6 +220,7 @@ like:
 ┃ app.vul
 └─ vinit \
   ┃ mymodule.vul
+```
 
 you can use plugin in the app.vul only like this:
 
