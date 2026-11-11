@@ -199,15 +199,38 @@ D delay    # wait the value of variable
 
 ### <img src="https://github.com/user-attachments/assets/56767662-3b77-45bf-aa31-681462533dec" width="24" alt="modules"> Imports
 
-You can Import Vulpin Modules with using ```U```.
+## Create a module's
+```basic
+Fadd(a,b)
+Ra+b
+~
+```
+## Import vulpin module's with ```U```.
 
 ```basic
-G os.getcwd()
-os.system("echo Hello")
-os.system(ls)
-U"math"
-G math.sqrt(16)
+U"mymodule"
+G(mymodule.add(5,3))
 ```
+
+## Plugins
+
+You can import module's as auto mode with plugin's, Just you have to Create a folder called `vinit` in the same direction.
+
+like:
+```
+┌ Project \
+┃ app.vul
+└─ vinit \
+  ┃ mymodule.vul
+
+you can use plugin in the app.vul only like this:
+
+```basic
+G(add(5,3))
+```
+
+See? no need to call modules.
+
 ##### Fun Fact
 `os.system()` and `os()` and `o()` are the same!
 and you can write like: `o"echo hi"!!` with no `()`!!
