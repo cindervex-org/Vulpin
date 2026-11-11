@@ -216,10 +216,10 @@ You can import module's as auto mode with plugin's, Just you have to Create a fo
 
 like:
 ```
-┌ Project \
-┃ app.vul
-└─ vinit \
-  ┃ mymodule.vul
+Vulpin/
+├── app.vul
+└── vinit/
+    └── mymodule.vul
 ```
 
 you can use plugin in the app.vul only like this:
@@ -415,6 +415,55 @@ Vulpin 1.0.1
 
 ---
 
+## <img src="https://github.com/user-attachments/assets/19e80f7d-ace6-4c9e-b377-e701a806f5ee" width="28" alt="Quick Start"> Vasm
+
+You can have access to registers in Vulpin easily!
+```basic
+m rax, 10
+m rbx, 5
+add rax, rbx
+G rax
+cmp rax, 15
+je correct
+G"bad"
+jmp done
+L correct
+G"ok"
+L done
+```
+
+### for a another example:
+```basic
+m rax, 2
+m rbx, 3
+add rax, rbx
+G rax
+```
+
+### you'll need it!
+
+| VASM shortcut | Assembly instruction | Purpose                 |
+| ------------- | -------------------- | ----------------------- |
+| `m`           | `mov`                | Move data               |
+| `a`           | `add`                | Addition                |
+| `s`           | `sub`                | Subtraction             |
+| `u`           | `mul`                | Unsigned multiplication |
+| `d`           | `div`                | Unsigned division       |
+| `i`           | `inc`                | Increment               |
+| `e`           | `dec`                | Decrement               |
+| `c`           | `cmp`                | Compare                 |
+| `j`           | `jmp`                | Jump                    |
+| `z`           | `jz`                 | Jump if zero            |
+| `n`           | `nop`                | No operation            |
+| `p`           | `push`               | Push onto stack         |
+| `o`           | `pop`                | Pop from stack          |
+| `r`           | `ret`                | Return                  |
+| `x`           | `xor`                | Bitwise XOR             |
+| `t`           | `test`               | Test bits               |
+| `h`           | `syscall`            | System call             |
+
+---
+
 # <img src="https://github.com/user-attachments/assets/8f8e61bd-0bfb-43ff-a569-691c73709268" width="35" alt="fix"> Troubleshooting
 
 Let's fix your **problems**!
@@ -435,7 +484,6 @@ Let's fix your **problems**!
 ## <img src="https://github.com/user-attachments/assets/63cdbf04-c831-4ffe-a03d-f28c98cdd8fd" width="28" alt="licence"> License
 
 MIT LICENCE.
-CHECK OUT LICENCE.
 ICONS ARE UNDER LICENCE TOO.
 
 ---
