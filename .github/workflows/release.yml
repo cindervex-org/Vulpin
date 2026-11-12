@@ -1,0 +1,34 @@
+name: 🚀 Auto Release Aether (v*)
+
+on:
+  push:
+    tags:
+      - 'release-v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt install nasm -y
+      - run: chmod +x build.sh && ./build.sh
+
+  create-releas:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Propare artifacts
+        run: find artifacts -type f -exec mv {} . \;
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            vulpin-core
+          generate_release_notes: true
