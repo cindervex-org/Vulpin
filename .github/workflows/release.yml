@@ -1,4 +1,4 @@
-name: 🚀 Auto Release Aether (v*)
+name: Auto Release (v*)
 
 on:
   push:
