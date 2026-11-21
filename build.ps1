@@ -16,7 +16,7 @@ if (-not (Get-Command gcc -ErrorAction SilentlyContinue)) {
 }
 
 if (-not (Test-Path $AsmFile)) {
-    Write-Error "Error: file vilpin.asm not found: $AsmFile"
+    Write-Error "Error: file vulpin.asm not found: $AsmFile"
     exit 1
 }
 
